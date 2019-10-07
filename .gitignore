@@ -31,5 +31,5 @@
 *.out
 *.app
 
-.suo
-Browse.VC.db
+*.ilk
+*.pdb
