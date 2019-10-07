@@ -1,0 +1,3 @@
+﻿  Extern.cpp
+C:\proC\CPPSyntax\Extern\Extern.cpp(19,16): warning C4305:  '=': truncation from 'double' to 'float'
+  Extern.vcxproj -> C:\proC\CPPSyntax\Debug\Extern.exe
