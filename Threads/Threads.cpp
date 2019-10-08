@@ -1,8 +1,11 @@
 #include <iostream>
-#include "multiThreads.h"
+#include "Simplest.h"
+#include "ThreadId.h"
 
 int main()
 {
     std::cout << "Multi Threads Test\n";
-	startThreads();
+
+	//startSimplest();
+	startThreadId();
 }

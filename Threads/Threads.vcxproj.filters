@@ -18,12 +18,18 @@
     <ClCompile Include="Threads.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="multiThreads.cpp">
+    <ClCompile Include="Simplest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadId.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="multiThreads.h">
+    <ClInclude Include="Simplest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadId.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
