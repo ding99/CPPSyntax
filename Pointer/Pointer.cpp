@@ -5,5 +5,6 @@ int main()
 {
     std::cout << "Pointer Test\n";
 
-	typeCompare();
+	//typeCompare();
+	valuePointer();
 }

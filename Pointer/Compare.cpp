@@ -1,8 +1,10 @@
 #include <iostream>
 #include "Compare.h"
 
+using namespace std;
+
 void typeCompare() {
-	std::cout << "typedef Comparison" << std::endl;
+	cout << "typedef Comparison" << endl;
 
 	typedef int* pint;
 
@@ -11,11 +13,35 @@ void typeCompare() {
 	const pint p1 = &i1;
 	const PINT p2 = &i2;
 
-	std::cout << "p1: " << p1 << " *p1: " << *p1 << std::endl;
+	cout << "p1: " << p1 << " *p1: " << *p1 << endl;
 	*p1 = 5;
-	std::cout << "p1: " << p1 << " *p1: " << *p1 << std::endl;
+	cout << "p1: " << p1 << " *p1: " << *p1 << endl;
 
-	std::cout << "p2: " << p2 << " *p2: " << *p2 << std::endl;
+	cout << "p2: " << p2 << " *p2: " << *p2 << endl;
 	p2 = &i1;
-	std::cout << "p2: " << p2 << " *p2: " << *p2 << std::endl;
+	cout << "p2: " << p2 << " *p2: " << *p2 << endl;
+}
+
+void valuePointer() {
+	cout << "pointer values" << endl;
+
+	int var1;
+	char var2[10];
+
+	cout << "var1 variable address : " << &var1 << endl;
+	cout << "var2 variable address : " << &var2 << endl;
+	cout << "var2 variable : " << var2 << endl;
+
+	char* var3 = (char*)malloc(26);
+	strcpy_s(var3, 26, "abcdefg");
+	cout << "var3 variable address <" << &var3 << "> [" << var3 << "] length " << strlen(var3) << endl;
+	var3 = (char*)malloc(2880);
+	strcpy_s(var3, 28, "h1234567890");
+	cout << "var3 variable address <" << &var3 << "> [" << var3 << "] length " << strlen(var3) << endl;
+
+	char* var5;
+	var5 = new char[32];
+	strcpy_s(var5, 32, "sdsdsdsdsdsd");
+	cout << "var5 variable address <" << &var5 << "> [" << var5 << "] length " << strlen(var5) << endl;
+	delete var5;
 }

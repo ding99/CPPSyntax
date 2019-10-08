@@ -31,5 +31,9 @@
 *.out
 *.app
 
+# self
 *.ilk
 *.pdb
+*.idb
+
+Debug\*.*

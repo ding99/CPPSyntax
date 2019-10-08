@@ -3,3 +3,4 @@
 #define PINT int*
 
 void typeCompare();
+void valuePointer();
