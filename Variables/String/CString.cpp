@@ -7,7 +7,7 @@
 using namespace std;
 
 int cstringCreation() {
-	cout << "Step 1 : create string" << endl << endl;
+	cout << "=> Step 1 : create string" << endl << endl;
 
 	string a(4, 'a');
 	cout << "1.length 4 based on \"a\"\n";
@@ -15,13 +15,13 @@ int cstringCreation() {
 	cout << a << endl << endl;
 
 	cout << "2.string with any size\n";
-	cout << "string b(\"bbbbbb\");\n";
-	string b("bbbbbb");
+	cout << "string b(\"abcdef\");\n";
+	string b("abcdef");
 	cout << b << endl << endl;
 
-	cout << "3.give part of a string to c (length 4 at position 0)\n";
-	cout << "string c(a,0,4);\n";
-	string c(a, 0, 4);
+	cout << "3.give part of b string to c (length 4 at position 1)\n";
+	cout << "string c(b,1,4);\n";
+	string c(b, 1, 4);
 	cout << c << endl << endl;
 
 	cout << "4.append \"*\" because the original length 10 is not enough\n";
@@ -33,7 +33,7 @@ int cstringCreation() {
 }
 
 int cstringAssign() {
-	cout << "Step 2 : assign();" << endl << endl;
+	cout << "=> Step 2 : assign();" << endl << endl;
 
 	cout << "1.like append, but erase then overwrite\n";
 	cout << "string e; char f[10]=\"123456\" e.assign(f); e+=' ';\n";
@@ -85,7 +85,7 @@ int cstringAssign() {
 }
 
 int cstringAppend() {
-	cout << "Step 3 : string append and copy append(); string d(a); or d=d+a; d.append(b);" << endl;
+	cout << "=> Step 3 : string append and copy append(); string d(a); or d=d+a; d.append(b);" << endl;
 
 	string a(4, 'a');
 	string b("bbbbbb");
