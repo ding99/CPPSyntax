@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vector", "Vector\Vector.vcxproj", "{DF7EF5A5-2FDE-4602-95EB-F7F21EC86718}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vector", "Collection\Vector\Vector.vcxproj", "{DF7EF5A5-2FDE-4602-95EB-F7F21EC86718}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Iterator", "Iterator\Iterator.vcxproj", "{B2B813C5-C5B2-4409-BB9C-38D0500AAE91}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runoob", "Runoob", "{F3E77E19-EEA6-4712-BEB4-7FF2D1D04CE3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Variables", "Variables", "{2BE4F985-18DA-4E26-97FC-29187E450B51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Collection", "Collection", "{EA58F417-3AED-4D20-94F4-A5945FA67941}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +112,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{DF7EF5A5-2FDE-4602-95EB-F7F21EC86718} = {EA58F417-3AED-4D20-94F4-A5945FA67941}
 		{F609065A-572D-4D4B-A61B-C6BD4DF7AD41} = {2BE4F985-18DA-4E26-97FC-29187E450B51}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
