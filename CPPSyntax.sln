@@ -15,11 +15,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointer", "Pointer\Pointer.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Extern", "Extern\Extern.vcxproj", "{A86D7919-12C4-4F86-BA66-9D6779B0118E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "String", "String\String.vcxproj", "{F609065A-572D-4D4B-A61B-C6BD4DF7AD41}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "String", "Variables\String\String.vcxproj", "{F609065A-572D-4D4B-A61B-C6BD4DF7AD41}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Signal", "Signal\Signal.vcxproj", "{29CD9C7F-741F-448B-A8BF-8E5761BDFB97}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Threads", "Threads\Threads.vcxproj", "{31794FDB-D68C-49F8-B3DE-0BDE4D9020CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runoob", "Runoob", "{F3E77E19-EEA6-4712-BEB4-7FF2D1D04CE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Variables", "Variables", "{2BE4F985-18DA-4E26-97FC-29187E450B51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +108,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F609065A-572D-4D4B-A61B-C6BD4DF7AD41} = {2BE4F985-18DA-4E26-97FC-29187E450B51}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF7305EC-4607-4995-8C80-236730249F74}
