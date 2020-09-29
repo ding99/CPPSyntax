@@ -1059,5 +1059,7 @@ Makefile
 cmake_install.cmake
 install_manifest.txt
 
-## added
+## add
+**/*.VC.db
+**/*.suo
 **/*.suo
