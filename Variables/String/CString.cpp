@@ -17,7 +17,7 @@ int cstringCreation() {
 	cout << "2.string with any size\n";
 	cout << "string b(\"abcdef\");\n";
 	string b("abcdef");
-	cout << b << endl << endl;
+	cout << b << "  size " << b.length() << endl << endl;
 
 	cout << "3.give part of b string to c (length 4 at position 1)\n";
 	cout << "string c(b,1,4);\n";
@@ -41,15 +41,15 @@ int cstringAssign() {
 	char f[10] = "123456";
 	e.assign(f);
 	e += ' ';
-	cout << "<" <<  e << ">" << endl << endl;
+	cout << "<" <<  e << "> size " << e.length() << endl << endl;
 
 	cout << "2.string intervel assign\n";
 	cout << "e.assign(f,3,3); e+=' '; e.assign(f,3);\n";
 	e.assign(f, 3, 3);
 	e += ' ';
-	cout << "<" << e << ">" << endl;
+	cout << "<" << e << "> size " << e.length() << endl;
 	e.assign(f, 3);
-	cout << "<" << e << ">" << endl << endl;
+	cout << "<" << e << "> size " << e.length() << endl << endl;
 
 	cout << "3.whole of a string with type char\n";
 	cout << "char ssr[10]=\"asdqwezxc\"; e.assign(ssr);\n";
@@ -93,37 +93,38 @@ int cstringAppend() {
 	cout << "1. append string a in the end of d\n";
 	string d(a);
 	d.append(b);
-	cout << "<" << d << ">" << endl << endl;
+	cout << "<" << d << "> size " << d.length() << endl << endl;
 
 	cout << "2.append string b(length 2, position 0) in the end of d\n";
 	cout << "d.append(b,0,2);\n";
 	d.append(b, 0, 2);
-	cout << "<" << d << ">" << endl << endl;
+	cout << "<" << d << "> size " << d.length() << endl << endl;
 
 	cout << "3.append four character \"~\" \n";
 	cout << "d.append(4,'~');\n";
 	d.append(4, '~');
-	cout << "<" << d << ">" << endl << endl;
+	cout << "<" << d << "> size " << d.length() << endl << endl;
 
 	cout << "4. append with type int and char\n";
 	cout << "char app[100]=\"aaabbb\"; string charr(\"-_-\"); charr.append(app);\n";
 	char app[100] = "aaabbb";
+	cout << "app: <" << app << ">" << endl;
 	string charr("-_- ");
 	charr.append(app);
-	cout << "<" << charr << ">" << endl << endl;
+	cout << "<" << charr << "> size "<< charr.length() << endl << endl;
 
 	cout << "charr.append(app,4);\n";
 	charr.append(app, 4);
-	cout << "<" << charr << ">" << endl << endl;
+	cout << "<" << charr << "> size " << charr.length() << endl << endl;
 
 	cout << "5. whole array with type char, first four chars with type char; ***if append in middle***\n";
-	cout << "string tmp; string tmp; tmp.assign(app); charr.assign(\"\"); charr.append(tmp,1,4);\n";
+	cout << "string tmp; string tmp; tmp.assign(app); charr.assign(\"\"); charr.append(tmp,1,5);\n";
 	string tmp;
 	tmp.assign(app);
-	cout << "before <" << charr << ">" << endl;
+	cout << "before <" << charr << "> size " << charr.length() << endl;
 	charr.assign("");
-	charr.append(tmp, 1, 4);
-	cout << "after  <" << charr << ">" << endl << endl;
+	charr.append(tmp, 1, 5);
+	cout << "after  <" << charr << "> size " << charr.length() << endl << endl;
 
 	cout << "6.for int, double etc., transferred by sprintf_s() <cstdio>\n";
 	cout << "int aaa=15314; double bbb=3.1415; char aa[10];\nsprintf_s(aa,\"%d\",aaa); charr.append(aa,0,4); sprintf_s(aa,\"%f\",bbb); charr.append(aa,0,4);\n";
