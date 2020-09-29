@@ -6,9 +6,9 @@ int main()
 {
     std::cout << "String Test\n";
 
-	//Strcpy();
-	//cstringCreation();
-	//cstringAssign();
-	cstringAppend();
+	Strcpy();
 
+	cstringCreation();
+	cstringAssign();
+	cstringAppend();
 }
