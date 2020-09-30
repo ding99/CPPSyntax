@@ -28,4 +28,8 @@ void Refer() {
 	cout << "food: " << food << "\n";
 	cout << "meal: " << meal << ";  &meal: " << &meal << "\n";
 	cout << "foo2: " << foo2 << "\n";
+
+	string* ptr = &food;
+	cout << "Address: " << ptr << " ; " << &food << "\n";
+	cout << "value: " << *ptr << "\n";
 }
