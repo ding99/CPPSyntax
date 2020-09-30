@@ -7,8 +7,11 @@ int main()
     std::cout << "String Test\n";
 
 	Strcpy();
+	Refer();
 
-	cstringCreation();
-	cstringAssign();
-	cstringAppend();
+	if (false) {
+		cstringCreation();
+		cstringAssign();
+		cstringAppend();
+	}
 }
