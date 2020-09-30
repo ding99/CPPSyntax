@@ -5,7 +5,7 @@
 #include "Arrays.h"
 
 void Arrays::start() {
-	std::cout << "Start: Array[]\n";
+	std::cout << "=>Use Array[]\n";
 
 	std::string cars[] = {"Volvo", "BMW", "Ford", "Mazda"};
 
@@ -23,6 +23,7 @@ void Arrays::start() {
 		std::cout << " <" << cars[i] << ">";
 	std::cout << "\n";
 
+	std::cout << "=> Use array library\n";
 	std::array<std::string, 5> cara = { "Nissan", "BMW", "Ford", "Mazda" };
 	cara[4] = "Polo";
 	int n = cara.size();
