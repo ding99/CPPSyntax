@@ -84,6 +84,7 @@ int cstringAssign() {
 	return 0;
 }
 
+// size() is length()
 int cstringAppend() {
 	cout << "=> Step 3 : string append and copy append(); string d(a); or d=d+a; d.append(b);" << endl;
 
@@ -136,7 +137,7 @@ int cstringAppend() {
 	charr.append(aa, 0, 4);
 	sprintf_s(aa, "%f", bbb);
 	charr.append(aa, 0, 4);
-	cout << "after  <" << charr << ">" << endl << endl;
+	cout << "after  <" << charr << "> size " << charr.size() << endl << endl;
 
 	return 0;
 }
