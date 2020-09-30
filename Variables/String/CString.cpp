@@ -120,10 +120,10 @@ int cstringAppend() {
 	cout << "string tmp; string tmp; tmp.assign(app); charr.assign(\"\"); charr.append(tmp,1,4);\n";
 	string tmp;
 	tmp.assign(app);
-	cout << "before <" << charr << ">" << endl;
+	cout << "before <" << charr << "> size " << charr.size() << endl;
 	charr.assign("");
 	charr.append(tmp, 1, 4);
-	cout << "after  <" << charr << ">" << endl << endl;
+	cout << "after  <" << charr << "> size " << charr.size() << endl << endl;
 
 	cout << "6.for int, double etc., transferred by sprintf_s() <cstdio>\n";
 	cout << "int aaa=15314; double bbb=3.1415; char aa[10];\nsprintf_s(aa,\"%d\",aaa); charr.append(aa,0,4); sprintf_s(aa,\"%f\",bbb); charr.append(aa,0,4);\n";
