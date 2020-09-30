@@ -15,13 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="String.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="StringCopy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entrance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
