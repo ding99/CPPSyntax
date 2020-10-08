@@ -5,15 +5,16 @@
 void Characters::noRepeating() {
 	std::cout << "== Length of a string without repeating characters\n";
 
-	lengthOfLongestSubstring("abcdefgabcdefh");
-	lengthOfLongestSubstring("123333333333333333331");
-	lengthOfLongestSubstring("hello everybody!");
+	numberOfCharacters("abcdefgabcdefh");
+	numberOfCharacters("123333333333333333331");
+	numberOfCharacters("hello everybody!");
 }
 
-void Characters::lengthOfLongestSubstring(std::string s) {
+void Characters::numberOfCharacters(std::string s) {
 	std::cout << "[" << s << "]";
 	useInsert(s);
 	useDefine(s);
+	subString(s);
 	std::cout << "\n";
 }
 
@@ -30,4 +31,9 @@ void Characters::useInsert(std::string s) {
 void Characters::useDefine(std::string s) {
 	std::unordered_set<char> chars(s.begin(), s.end());
 	std::cout << " By Defining: <" << chars.size() << ">.";
+}
+
+void Characters::subString(std::string s) {
+	std::unordered_set<char> chars(s.begin(), s.end());
+	std::cout << " Sub String: <" << chars.size() << ">.";
 }
