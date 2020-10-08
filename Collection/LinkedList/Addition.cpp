@@ -2,7 +2,7 @@
 #include "Addition.h"
 
 void Addition::start() {
-    std::cout << "== Addition Start\n";
+    std::cout << "== Addition Tests\n";
 
     test(new int[] {2, 4, 3}, 3, new int[] { 5, 6, 4 }, 3);
     test(new int[] {0}, 1, new int[] {0}, 1);
@@ -10,14 +10,11 @@ void Addition::start() {
 }
 
 void Addition::dsp(ListNode* node) {
-    ListNode *temp = NULL;
-    int size = 0;
-    if(node != NULL) do {
+    while(node != NULL) {
         std::cout << node->val << " ";
         node = node->next;
-        size++;
-    } while (node != NULL);
-    std::cout << "size " << size << "\n";
+    }
+    std::cout << "\n";
 }
 
 ListNode* Addition::newList(int a[], int size) {
@@ -27,12 +24,13 @@ ListNode* Addition::newList(int a[], int size) {
         (start == NULL ? start : current->next) = temp;
         current = temp;
     }
-    dsp(start);
     return start;
 }
 
 void Addition::test(int a1[], int size1, int a2[], int size2) {
-    ListNode *list1 = newList(a1, size1), *list2 = newList(a2, size2);
+    std::cout << "-- one test\n";
+    ListNode* list1 = newList(a1, size1); dsp(list1);
+    ListNode* list2 = newList(a2, size2); dsp(list2);
     dsp(addTwoNumbers(list1, list2));
 }
 

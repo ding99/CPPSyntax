@@ -6,7 +6,6 @@
 
 int main()
 {
-    std::cout << "== Application Start\n";
     Addition a;
     a.start();
 }
