@@ -2,6 +2,10 @@
 #include "Addition.h"
 
 void Addition::start() {
+    int a[] = { 1, 2, 3, 4, 5, 6 };
+    int size = sizeof(a) / sizeof(*a);
+    std::cout << "== Examining sizeof(): size " << size << "\n\n";
+
     std::cout << "== Addition Tests\n";
 
     test(new int[] {2, 4, 3}, 3, new int[] { 5, 6, 4 }, 3);
