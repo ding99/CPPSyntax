@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NoRepeatingCharacters.cpp">
+    <ClCompile Include="Characters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Characters.cpp">
+    <ClCompile Include="Entrance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

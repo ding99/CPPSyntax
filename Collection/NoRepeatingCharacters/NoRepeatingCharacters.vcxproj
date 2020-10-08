@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Characters.cpp" />
-    <ClCompile Include="NoRepeatingCharacters.cpp" />
+    <ClCompile Include="Entrance.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Characters.h" />

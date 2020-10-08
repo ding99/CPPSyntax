@@ -6,6 +6,6 @@ class Characters
 public:
 	void noRepeating();
 private:
-	int lengthOfLongestSubstring(std::string);
+	void lengthOfLongestSubstring(std::string);
 };
 
