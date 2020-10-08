@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array", "Variables\Array\Ar
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "Collection\LinkedList\LinkedList.vcxproj", "{514D2C87-0E82-4D88-AC74-BA5644C66896}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NoRepeatingCharacters", "Collection\NoRepeatingCharacters\NoRepeatingCharacters.vcxproj", "{08BD1DA3-E739-497F-9C32-224C56315289}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -187,6 +189,18 @@ Global
 		{514D2C87-0E82-4D88-AC74-BA5644C66896}.Release|x64.Build.0 = Release|x64
 		{514D2C87-0E82-4D88-AC74-BA5644C66896}.Release|x86.ActiveCfg = Release|Win32
 		{514D2C87-0E82-4D88-AC74-BA5644C66896}.Release|x86.Build.0 = Release|Win32
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Debug|ARM.ActiveCfg = Debug|Win32
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Debug|x64.ActiveCfg = Debug|x64
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Debug|x64.Build.0 = Debug|x64
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Debug|x86.ActiveCfg = Debug|Win32
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Debug|x86.Build.0 = Debug|Win32
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Release|ARM.ActiveCfg = Release|Win32
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Release|ARM64.ActiveCfg = Release|Win32
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Release|x64.ActiveCfg = Release|x64
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Release|x64.Build.0 = Release|x64
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Release|x86.ActiveCfg = Release|Win32
+		{08BD1DA3-E739-497F-9C32-224C56315289}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -203,6 +217,7 @@ Global
 		{31794FDB-D68C-49F8-B3DE-0BDE4D9020CA} = {D19C937D-4CD3-4010-B26A-1797B29C1080}
 		{9D033331-0911-4218-BA8A-1E61FED05668} = {2BE4F985-18DA-4E26-97FC-29187E450B51}
 		{514D2C87-0E82-4D88-AC74-BA5644C66896} = {EA58F417-3AED-4D20-94F4-A5945FA67941}
+		{08BD1DA3-E739-497F-9C32-224C56315289} = {EA58F417-3AED-4D20-94F4-A5945FA67941}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF7305EC-4607-4995-8C80-236730249F74}
