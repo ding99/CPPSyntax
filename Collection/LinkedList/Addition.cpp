@@ -1,19 +1,19 @@
 #include <iostream>
-#include <exception>
 #include "Addition.h"
 
 void Addition::start() {
     std::cout << "== Addition Start\n";
 
-    int a1[] = {2, 4, 3}, a2[] = {5, 6, 4};
-    test(a1, 3, a2, 3);
+    test(new int[] {2, 4, 3}, 3, new int[] { 5, 6, 4 }, 3);
+    test(new int[] {0}, 1, new int[] {0}, 1);
+    test(new int[] {9, 9, 9, 9, 9, 9, 9}, 7, new int[] {9, 9, 9, 9}, 4);
 }
 
 void Addition::dsp(ListNode* node) {
     ListNode *temp = NULL;
     int size = 0;
     if(node != NULL) do {
-        std::cout << node->val << "/" << (node->next == NULL) << " ";
+        std::cout << node->val << " ";
         node = node->next;
         size++;
     } while (node != NULL);
@@ -38,19 +38,16 @@ void Addition::test(int a1[], int size1, int a2[], int size2) {
 
 ListNode* Addition::addTwoNumbers(ListNode* l1, ListNode* l2) {
     int carry = 0;
-    ListNode *start = NULL, *current = start, *temp = NULL;
+    ListNode *start = NULL, *current = NULL, *temp = NULL;
 
-    int i = 0;
     while (l1 != NULL || l2 != NULL) {
-        std::cout << ++i << ": " << carry << " / " << (l1 != NULL ? l1->val : NULL) << " / " << (l2 != NULL ? l2->val : NULL);
         if (l1 != NULL) { carry += l1->val; l1 = l1->next; }
         if (l2 != NULL) { carry += l2->val; l2 = l2->next; }
-        std::cout << " / " << carry;
+
         temp = new ListNode(carry % 10);
         (start == NULL ? start : current->next) = temp;
         current = temp;
         carry /= 10;
-        std::cout << "\n";
     }
 
     if (carry > 0 && current != NULL)
