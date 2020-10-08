@@ -1,13 +1,13 @@
-// LinkedList.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// NoRepeatingCharacters.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-#include "Addition.h"
+#include "Characters.h"
 
 int main()
 {
-    Addition a;
-    a.start();
+    Characters c;
+    c.noRepeating();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

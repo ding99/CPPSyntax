@@ -1,23 +1,24 @@
 #include <iostream>
-#include <exception>
 #include "Addition.h"
 
 void Addition::start() {
-    std::cout << "== Addition Start\n";
+    int a[] = { 1, 2, 3, 4, 5, 6 };
+    int size = sizeof(a) / sizeof(*a);
+    std::cout << "== Examining sizeof(): size " << size << "\n\n";
 
-    int a1[] = {2, 4, 3}, a2[] = {5, 6, 4};
-    test(a1, 3, a2, 3);
+    std::cout << "== Addition Tests\n";
+
+    test(new int[] {2, 4, 3}, 3, new int[] { 5, 6, 4 }, 3);
+    test(new int[] {0}, 1, new int[] {0}, 1);
+    test(new int[] {9, 9, 9, 9, 9, 9, 9}, 7, new int[] {9, 9, 9, 9}, 4);
 }
 
 void Addition::dsp(ListNode* node) {
-    ListNode *temp = NULL;
-    int size = 0;
-    if(node != NULL) do {
-        std::cout << node->val << "/" << (node->next == NULL) << " ";
+    while(node != NULL) {
+        std::cout << node->val << " ";
         node = node->next;
-        size++;
-    } while (node != NULL);
-    std::cout << "size " << size << "\n";
+    }
+    std::cout << "\n";
 }
 
 ListNode* Addition::newList(int a[], int size) {
@@ -27,30 +28,28 @@ ListNode* Addition::newList(int a[], int size) {
         (start == NULL ? start : current->next) = temp;
         current = temp;
     }
-    dsp(start);
     return start;
 }
 
 void Addition::test(int a1[], int size1, int a2[], int size2) {
-    ListNode *list1 = newList(a1, size1), *list2 = newList(a2, size2);
+    std::cout << "-- one test\n";
+    ListNode* list1 = newList(a1, size1); dsp(list1);
+    ListNode* list2 = newList(a2, size2); dsp(list2);
     dsp(addTwoNumbers(list1, list2));
 }
 
 ListNode* Addition::addTwoNumbers(ListNode* l1, ListNode* l2) {
     int carry = 0;
-    ListNode *start = NULL, *current = start, *temp = NULL;
+    ListNode *start = NULL, *current = NULL, *temp = NULL;
 
-    int i = 0;
     while (l1 != NULL || l2 != NULL) {
-        std::cout << ++i << ": " << carry << " / " << (l1 != NULL ? l1->val : NULL) << " / " << (l2 != NULL ? l2->val : NULL);
         if (l1 != NULL) { carry += l1->val; l1 = l1->next; }
         if (l2 != NULL) { carry += l2->val; l2 = l2->next; }
-        std::cout << " / " << carry;
+
         temp = new ListNode(carry % 10);
         (start == NULL ? start : current->next) = temp;
         current = temp;
         carry /= 10;
-        std::cout << "\n";
     }
 
     if (carry > 0 && current != NULL)
