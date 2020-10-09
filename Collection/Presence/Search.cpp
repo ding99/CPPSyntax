@@ -14,10 +14,13 @@ void Search::start() {
 	int ints[] = { -9, 14, 37, 102 };
 	dsp(exists(ints, 4, 102));
 	dsp(exists(ints, 4, 36));
+
+	dsp(byVector(ints, 4, 102));
+	dsp(byVector(ints, 4, 36));
 }
 
 void Search::dsp(bool flag) {
-	std::cout << (flag ? "Existing" : "Not Found") << "\n";
+	std::cout << (flag ? "Existing" : "Not Found") << std::endl;
 }
 
 bool Search::exists(int ints[], int size, int k) {
@@ -28,11 +31,16 @@ bool Search::exists(int ints[], int size, int k) {
 
 	while (stt + 1 < end) {
 		crt = (stt + end) / 2;
-		std::cout << "(" << crt << "," << ints[crt] << ") ";
 		if (ints[crt] == k)
 			return true;
 		else (ints[crt] > k ? end : stt) = crt;
 	}
 
 	return false;
+}
+
+bool Search::byVector(int ints[], int size, int k) {
+	std::vector<int> v(ints, ints + size);
+
+	return std::find(v.begin(), v.end(), k) != v.end();
 }
