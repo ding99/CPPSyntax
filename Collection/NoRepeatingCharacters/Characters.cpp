@@ -1,22 +1,23 @@
 #include <iostream>
 #include <unordered_set>
-#include <vector>
 #include "Characters.h"
 
 void Characters::noRepeating() {
 	std::cout << "== Length of a string without repeating characters\n";
 
-	numberOfCharacters("abcdefgabcdefh");
-	numberOfCharacters("123333333333333333331");
-	numberOfCharacters("hello everybody!");
-	numberOfCharacters("pwwkew");
+	//numberOfCharacters("abcdefgabcdefh");
+	//numberOfCharacters("123333333333333333331");
+	//numberOfCharacters("hello everybody!");
+	//numberOfCharacters("pwwkew");
+	numberOfCharacters("dvdf");
 }
 
 void Characters::numberOfCharacters(std::string s) {
 	std::cout << "[" << s << "]";
-	useInsert(s);
-	useDefine(s);
-	subString(s);
+	//useInsert(s);
+	//useDefine(s);
+	//subString(s);
+	subString1(s);
 	std::cout << "\n";
 }
 
@@ -62,4 +63,39 @@ void Characters::subString(std::string s) {
 		max = chars.size();
 
 	std::cout << " Sub String: <" << max << ">.";
+}
+
+void Characters::subString1(std::string s) {
+	std::vector<char> chars;
+	int max = 0, step = 1, size = s.size();
+
+	for (int i = 0; i < size; i += step) {
+		chars.push_back(s[i]);
+
+		if (i + 1 == size)
+			break;
+
+		for (int j = i + 1; j < size; j++) {
+			//std::vector<char>::iterator it = find(chars.begin(), chars.end(), s[j]);
+			auto it = find(chars.begin(), chars.end(), s[j]);
+
+			if (it == chars.end()) {
+				chars.push_back(s[j]);
+				if (j + 1 == size)
+					step = size - i;
+			} else {
+				if (chars.size() > max)
+					max = chars.size();
+
+				step = (it - chars.begin()) + 1;
+				chars.clear();
+				break;
+			}
+		}
+	}
+
+	if (chars.size() > max)
+		max = chars.size();
+
+	std::cout << " Sub-2: <" << max << ">.";
 }
