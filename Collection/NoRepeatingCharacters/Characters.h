@@ -11,6 +11,6 @@ private:
 	void useInsert(std::string);
 	void useDefine(std::string);
 	void subString(std::string);
-	void subString1(std::string);
+	void useVector(std::string);
 };
 

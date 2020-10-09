@@ -5,19 +5,19 @@
 void Characters::noRepeating() {
 	std::cout << "== Length of a string without repeating characters\n";
 
-	//numberOfCharacters("abcdefgabcdefh");
-	//numberOfCharacters("123333333333333333331");
-	//numberOfCharacters("hello everybody!");
-	//numberOfCharacters("pwwkew");
+	numberOfCharacters("abcdefgabcdefh");
+	numberOfCharacters("123333333333333333331");
+	numberOfCharacters("hello everybody!");
+	numberOfCharacters("pwwkew");
 	numberOfCharacters("dvdf");
 }
 
 void Characters::numberOfCharacters(std::string s) {
 	std::cout << "[" << s << "]";
-	//useInsert(s);
-	//useDefine(s);
-	//subString(s);
-	subString1(s);
+	useInsert(s);
+	useDefine(s);
+	subString(s);
+	useVector(s);
 	std::cout << "\n";
 }
 
@@ -65,7 +65,7 @@ void Characters::subString(std::string s) {
 	std::cout << " Sub String: <" << max << ">.";
 }
 
-void Characters::subString1(std::string s) {
+void Characters::useVector(std::string s) {
 	std::vector<char> chars;
 	int max = 0, step = 1, size = s.size();
 
@@ -76,7 +76,6 @@ void Characters::subString1(std::string s) {
 			break;
 
 		for (int j = i + 1; j < size; j++) {
-			//std::vector<char>::iterator it = find(chars.begin(), chars.end(), s[j]);
 			auto it = find(chars.begin(), chars.end(), s[j]);
 
 			if (it == chars.end()) {
