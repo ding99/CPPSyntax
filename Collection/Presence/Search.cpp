@@ -21,5 +21,18 @@ void Search::dsp(bool flag) {
 }
 
 bool Search::exists(int ints[], int size, int k) {
-	return true;
+	int stt = 0, end = size - 1, crt = 0;
+
+	if (ints[stt] == k || ints[end] == k)
+		return true;
+
+	while (stt + 1 < end) {
+		crt = (stt + end) / 2;
+		std::cout << "(" << crt << "," << ints[crt] << ") ";
+		if (ints[crt] == k)
+			return true;
+		else (ints[crt] > k ? end : stt) = crt;
+	}
+
+	return false;
 }
