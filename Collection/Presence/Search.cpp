@@ -17,6 +17,9 @@ void Search::start() {
 
 	dsp(byVector(ints, 4, 102));
 	dsp(byVector(ints, 4, 36));
+
+	dsp(binarySearch(ints, 4, 102));
+	dsp(binarySearch(ints, 4, 36));
 }
 
 void Search::dsp(bool flag) {
@@ -43,4 +46,10 @@ bool Search::byVector(int ints[], int size, int k) {
 	std::vector<int> v(ints, ints + size);
 
 	return std::find(v.begin(), v.end(), k) != v.end();
+}
+
+bool Search::binarySearch(int ints[], int size, int k) {
+	std::vector<int> v(ints, ints + size);
+
+	return std::binary_search(v.begin(), v.end(), k);
 }
