@@ -7,7 +7,7 @@
 using namespace std;
 
 int cstringCreation() {
-	cout << "=> Step 1 : create string" << endl << endl;
+	cout << endl << "=> Step 1 : create string" << endl << endl;
 
 	string a(4, 'a');
 	cout << "1.length 4 based on \"a\"\n";
@@ -68,15 +68,17 @@ int cstringAssign() {
 	cout << "<" << e << ">" << endl << endl;
 
 	cout << "6.copy() : copy and overwirte twelve chars from position 2 from d to ss with type char. Must be type char otherwise get error\n";
-	cout << " char ss[10]=\"123\"; string dd; d.copy(ss,12,2);\n";
+	cout << " char ss[10]=\"123\"; string dd(\"abcdefghijklmn\"); d.copy(ss,12,2);\n";
 	char ss[15] = "123";
-	cout << "before copy <" << ss << ">" << endl;
+	cout << "before copy: ss is <" << ss << ">" << endl;
 	string dd("abcdefghijklmn");
+	cout << "before copy: dd is <" << dd << ">" << endl;
 	dd.copy(ss, 12, 2);
-	cout << "after copy <" << ss << ">" << endl << endl;
+	cout << "after copy: ss is <" << ss << ">" << endl;
+	cout << "after copy: dd is <" << dd << ">" << endl << endl;
 
 	cout << "7.copy() : copy and overwirte twenty chars from position 2 from d to ss with type char. Will get warning\n";
-	cout << " char ss2[10]=\"123\"; string dd; d.copy(ss2,20,2);\n";
+	cout << " char ss2[10]=\"123\"; string dd; dd.copy(ss2,20,2);\n";
 	char ss2[15] = "123";
 	dd.copy(ss2, 20, 2);
 	cout << "<" << ss2 << ">" << endl << endl;
@@ -90,6 +92,7 @@ int cstringAppend() {
 
 	string a(4, 'a');
 	string b("bbbbbb");
+	cout << "0. original: a is <" << a << ">, b is <" << b << ">." << endl;
 
 	cout << "1. append string a in the end of d\n";
 	string d(a);
