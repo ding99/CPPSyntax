@@ -9,7 +9,7 @@ int main()
 	Strcpy();
 	Refer();
 
-	if (false) {
+	if (true) {
 		cstringCreation();
 		cstringAssign();
 		cstringAppend();
