@@ -4,8 +4,8 @@
 
 void Evaluation::Start() {
 	std::cout << "-- Examining Switch" << std::endl;
+	std::cout << "<> Switch expression must have integral or enum type." << std::endl;
 
-	std::cout << "The expression is an integer variable." << std::endl;
 	int day = 4;
 	switch(day) {
 		case 1: std::cout << "Monday"; break;
