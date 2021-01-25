@@ -9,6 +9,8 @@ void Arrays::start() {
 
 	std::string cars[] = {"Volvo", "BMW", "Ford", "Mazda"};
 
+	std::cout << "size of array : " << sizeof(cars) / sizeof(cars[0]) << "\n";
+
 	std::cout << "car 0: <" << cars[0] << ">\n";
 
 	std::cout << "Orginal:";
