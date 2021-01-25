@@ -7,4 +7,5 @@ int main()
 
     Types t;
     t.sizes();
+    t.enums();
 }
