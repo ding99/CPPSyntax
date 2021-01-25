@@ -7,4 +7,5 @@ int main()
 
     Arrays a;
     a.start();
+    a.sizes();
 }
