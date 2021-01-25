@@ -5,7 +5,7 @@
 #include "Arrays.h"
 
 void Arrays::start() {
-	std::cout << "=>Use Array[]\n";
+	std::cout << "=>Examine Array[]\n";
 
 	std::string cars[] = {"Volvo", "BMW", "Ford", "Mazda"};
 
