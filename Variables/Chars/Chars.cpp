@@ -1,21 +1,21 @@
 #include <iostream>
+#include <cstring>
 #include "Chars.h"
 
+
+// to double check
 void Chars::define() {
 	char greeting[] = "Testing Chars";
 
 	std::cout << "src <" << greeting << ">\n";
 
-	int len = sizeof(greeting);
+	int len = strlen(greeting) + 1;
 	std::cout << "org size : " << len << "\n";
 
-	char *dst;
-	dst = (char*)malloc(len);
+	char *dst = (char*)malloc(sizeof(char) * len);
 
-	memset(dst, 0, len);
-	memcpy(dst, greeting, len);
-
-	std::cout << "dst size : " << sizeof(dst) << "\n";
+	std::memset(dst, 0, len);
+	std::memcpy(dst, greeting, len);
 
 	std::cout << "dst <" <<  dst << ">\n";
 }
