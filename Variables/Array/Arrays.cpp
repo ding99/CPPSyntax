@@ -25,9 +25,16 @@ void Arrays::start() {
 
 	std::cout << "=> Use array library\n";
 	std::array<std::string, 5> cara = { "Nissan", "BMW", "Ford", "Mazda" };
-	cara[4] = "Polo";
 	int n = cara.size();
-	std::cout << "Arrays :";
+	std::cout << "Arrays (size " << n << " ) :";
+	for (int i = 0; i < n; i++)
+		std::cout << " <" << cara[i] << ">";
+	std::cout << "\n";
+
+	std::cout << "Sign 'Polo' to Array[4].\n";
+	cara[4] = "Polo";
+	n = cara.size();
+	std::cout << "Arrays (size " << n << " ) :";
 	for (int i = 0; i < n; i++)
 		std::cout << " <" << cara[i] << ">";
 	std::cout << "\n";
